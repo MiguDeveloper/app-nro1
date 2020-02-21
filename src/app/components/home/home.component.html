@@ -1,0 +1,26 @@
+<div class="row animated fadeIn fast">
+  <div class="col">
+    <h1>*ngIf</h1>
+    <hr>
+
+    <div *ngIf="estado" class="card text-white bg-primary mb-3" style="width: 100%;">
+      <div class="card-body">
+        <h5 class="card-title">{{frase.autor}}</h5>
+        <p class="card-text">{{frase.mensaje}}</p>
+      </div>
+    </div>
+
+    <button (click)="estado = !estado"
+            class="btn btn-outline-primary btn-block">{{estado ? 'Ocultar' : 'Mostrar'}}</button>
+
+  </div>
+  <div class="col">
+    <h1>*ngFor</h1>
+    <hr>
+
+    <ul class="list-group">
+      <li *ngFor="let elemento of elementos; let i = index" class="list-group-item">{{i + 1}} - {{elemento}}</li>
+    </ul>
+
+  </div>
+</div>
