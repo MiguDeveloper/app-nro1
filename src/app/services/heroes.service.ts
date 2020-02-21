@@ -3,14 +3,6 @@ import {Injectable} from '@angular/core';
 @Injectable({
   providedIn: 'root'
 })
-
-export interface Heroe {
-  nombre: string;
-  bio: string;
-  img: string;
-  aparicion: string;
-  casa: string;
-}
 export class HeroesService {
 
   private heroes: Heroe[] = [
@@ -72,4 +64,16 @@ export class HeroesService {
   getHeroes(): Heroe[]{
     return this.heroes;
   }
+
+  getHeroe(idx: number){
+    return this.heroes[idx];
+  }
+}
+
+export interface Heroe {
+  nombre: string;
+  bio: string;
+  img: string;
+  aparicion: string;
+  casa: string;
 }
