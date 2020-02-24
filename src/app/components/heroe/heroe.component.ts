@@ -21,7 +21,4 @@ export class HeroeComponent implements OnInit {
       this.heroe = this.heroesService.getHeroe(params['id']);
     })
   }
-
-
-
 }

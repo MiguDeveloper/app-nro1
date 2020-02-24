@@ -4,6 +4,7 @@ import {AboutComponent} from './components/about/about.component';
 import {HeroesComponent} from './components/heroes/heroes.component';
 import {HeroeComponent} from './components/heroe/heroe.component';
 import {HeroesSearchComponent} from './components/heroes-search/heroes-search.component';
+import {PipesComponent} from './components/pipes/pipes.component';
 
 const APP_ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
@@ -11,6 +12,7 @@ const APP_ROUTES: Routes = [
   {path: 'heroes', component: HeroesComponent},
   {path: 'heroe/:id', component: HeroeComponent},
   {path: 'search/:termino', component: HeroesSearchComponent},
+  {path: 'pipes', component: PipesComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 
