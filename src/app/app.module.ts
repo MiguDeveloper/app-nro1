@@ -1,5 +1,5 @@
 import {BrowserModule} from '@angular/platform-browser';
-import {NgModule} from '@angular/core';
+import {LOCALE_ID, NgModule} from '@angular/core';
 
 import {AppComponent} from './app.component';
 import {HeaderComponent} from './components/shared/header/header.component';
@@ -13,6 +13,11 @@ import { HeroeComponent } from './components/heroe/heroe.component';
 import { HeroesSearchComponent } from './components/heroes-search/heroes-search.component';
 import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.component';
 import { PipesComponent } from './components/pipes/pipes.component';
+import {registerLocaleData} from '@angular/common';
+import localEs from '@angular/common/locales/es';
+
+// Metodo para setear el idioma
+registerLocaleData(localEs)
 
 @NgModule({
   declarations: [
@@ -32,6 +37,10 @@ import { PipesComponent } from './components/pipes/pipes.component';
     APP_ROUTING
   ],
   providers: [
+    {
+      provide: LOCALE_ID,
+      useValue: 'es'
+    },
     HeroesService
   ],
   bootstrap: [AppComponent]

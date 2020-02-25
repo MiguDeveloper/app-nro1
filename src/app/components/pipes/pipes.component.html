@@ -22,7 +22,108 @@
         <td>lowercase</td>
         <td>{{nombre | lowercase}}</td>
       </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>slice:3</td>
+        <td>{{nombre | slice:3}}</td>
+      </tr>
+      <tr>
+        <td>{{nombre}}</td>
+        <td>slice:0:3</td>
+        <td>{{nombre | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td>{{numeros}}</td>
+        <td>slice:0:3</td>
+        <td>{{numeros | slice:0:3}}</td>
+      </tr>
+      <tr>
+        <td>{{numeros}}</td>
+        <td>slice:1:5</td>
+        <td>{{numeros | slice:1:5}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number</td>
+        <td>{{PI | number:'3.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number:'3:0-0'</td>
+        <td>{{PI | number:'1.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{PI}}</td>
+        <td>number:'.0-2'</td>
+        <td>{{PI | number:'.0-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{porcentaje}}</td>
+        <td>percent</td>
+        <td>{{porcentaje | percent}}</td>
+      </tr>
+      <tr>
+        <td>{{porcentaje}}</td>
+        <td>percent:'.2-2'</td>
+        <td>{{porcentaje | percent:'.2-2'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency</td>
+        <td>{{salario | currency}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency:'PEN'</td>
+        <td>{{salario | currency:'PEN'}}</td>
+      </tr>
+      <tr>
+        <td>{{salario}}</td>
+        <td>currency:'PEN' solo parte entera</td>
+        <td>{{salario | currency:'PEN ':'symbol':'.0-0'}}</td>
+      </tr>
+      <tr>
+        <td>{{valorPromesa}}</td>
+        <td>async</td>
+        <td>{{valorPromesa | async}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date'</td>
+        <td>{{fecha | date}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date:'medium</td>
+        <td>{{fecha | date:'medium'}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date:short</td>
+        <td>{{fecha | date:'short'}}</td>
+      </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>date:'MMMM - dd'</td>
+        <td>{{fecha | date:'MMMM - dd'}}</td>
+      </tr>
       </tbody>
     </table>
+
+    <h4>Slice</h4>
+    <ul>
+      <li *ngFor="let numero of numeros | slice:5:20" class="list-group-item">{{numero}}</li>
+    </ul>
+
+    <h3>Json</h3>
+    <hr>
+    <div class="col mb-5">
+      <div class="col">
+        <pre>
+        {{heroe | json}}
+        </pre>
+      </div>
+    </div>
+
   </div>
 </div>
