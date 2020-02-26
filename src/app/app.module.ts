@@ -15,9 +15,14 @@ import { HeroeTarjetaComponent } from './components/heroe-tarjeta/heroe-tarjeta.
 import { PipesComponent } from './components/pipes/pipes.component';
 import {registerLocaleData} from '@angular/common';
 import localEs from '@angular/common/locales/es';
+import localFr from '@angular/common/locales/fr';
+import { CapitalizadoPipe } from './pipes/capitalizado.pipe';
+import { DomseguroPipe } from './pipes/domseguro.pipe';
+import { AsteriscosPipe } from './pipes/asteriscos.pipe';
 
 // Metodo para setear el idioma
 registerLocaleData(localEs)
+registerLocaleData(localFr)
 
 @NgModule({
   declarations: [
@@ -30,7 +35,10 @@ registerLocaleData(localEs)
     HeroeComponent,
     HeroesSearchComponent,
     HeroeTarjetaComponent,
-    PipesComponent
+    PipesComponent,
+    CapitalizadoPipe,
+    DomseguroPipe,
+    AsteriscosPipe
   ],
   imports: [
     BrowserModule,

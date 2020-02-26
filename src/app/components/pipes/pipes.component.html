@@ -18,6 +18,11 @@
         <td>{{nombre | uppercase}}</td>
       </tr>
       <tr>
+        <td>{{nombreMiguel}}</td>
+        <td>capitalizado</td>
+        <td>{{nombreMiguel | capitalizado:true}}</td>
+      </tr>
+      <tr>
         <td>{{nombre}}</td>
         <td>lowercase</td>
         <td>{{nombre | lowercase}}</td>
@@ -107,6 +112,25 @@
         <td>date:'MMMM - dd'</td>
         <td>{{fecha | date:'MMMM - dd'}}</td>
       </tr>
+      <tr>
+        <td>{{fecha}}</td>
+        <td>
+          date:'MMMM - dd':'':'{{idioma}}'
+          <br>
+          <button class="btn btn-primary mr-1" (click)="idioma = 'es'">Español</button>
+          <button class="btn btn-success mr-1" (click)="idioma = 'en'">Ingles</button>
+          <button class="btn btn-warning mr-1" (click)="idioma = 'fr'">Frances</button>
+        </td>
+        <td>{{fecha | date:'MMMM - dd':'':idioma}}</td>
+      </tr>
+      <tr>
+        <td>{{contrasenia}}</td>
+        <td>contrasena:{{activar}}
+          <br>
+          <button class="btn btn-outline-primary" (click)="activar = !activar">Activar/desactivar</button>
+        </td>
+        <td>{{contrasenia | asteriscos:activar}}</td>
+      </tr>
       </tbody>
     </table>
 
@@ -119,10 +143,16 @@
     <hr>
     <div class="col mb-5">
       <div class="col">
-        <pre>
+
         {{heroe | json}}
-        </pre>
+
       </div>
+    </div>
+
+    <h3 class="mt-4">Dom Seguro</h3>
+    <div class="col">
+      <iframe width="560" height="315" [src]="videoUrl | domseguro" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
     </div>
 
   </div>
