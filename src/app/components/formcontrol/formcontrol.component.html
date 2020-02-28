@@ -1,0 +1,17 @@
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="formUsuario">
+
+  <div class="form-group">
+    <label for="first">First</label>
+    <input formControlName="first" type="input" class="form-control" id="first" aria-describedby="emailHelp">
+    <small class="form-text text-muted">{{getError('first')}}</small>
+  </div>
+
+  <div class="form-group">
+    <label for="last">Last</label>
+    <input formControlName="last" type="input" class="form-control" id="last">
+    <small class="form-text text-muted">{{getError('last')}}</small>
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+
+</form>
