@@ -12,6 +12,11 @@
     <small class="form-text text-muted">{{getError('last')}}</small>
   </div>
 
+  <div class="form-group">
+    <button type="button" (click)="fileInput.click()">Cargar plantilla</button>
+    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+  </div>
+
   <button type="submit" class="btn btn-primary">Enviar</button>
 
 </form>
