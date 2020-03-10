@@ -35,6 +35,11 @@ export class FormcontrolComponent implements OnInit {
   onSubmit() {
     if (this.formUsuario.valid) {
       console.log('recibimos formulario correctamente');
+      const inputNode: any = document.querySelector('#file');
+      if(inputNode.file[0] == ''){
+        alert('Debe adjuntar una plantilla xlsx.')
+      }
+
     } else {
       alert('Formulario invalido');
       return;

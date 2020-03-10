@@ -6,6 +6,7 @@ import {HeroeComponent} from './components/heroe/heroe.component';
 import {HeroesSearchComponent} from './components/heroes-search/heroes-search.component';
 import {PipesComponent} from './components/pipes/pipes.component';
 import {FormcontrolComponent} from './components/formcontrol/formcontrol.component';
+import {SubirfileComponent} from './components/subirfile/subirfile.component';
 
 const APP_ROUTES: Routes = [
   {path: 'home', component: HomeComponent},
@@ -15,6 +16,7 @@ const APP_ROUTES: Routes = [
   {path: 'search/:termino', component: HeroesSearchComponent},
   {path: 'pipes', component: PipesComponent},
   {path: 'testform', component: FormcontrolComponent},
+  {path: 'rse', component: SubirfileComponent},
   {path: '**', pathMatch: 'full', redirectTo: 'home'}
 ];
 

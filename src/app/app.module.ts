@@ -21,6 +21,7 @@ import {DomseguroPipe} from './pipes/domseguro.pipe';
 import {AsteriscosPipe} from './pipes/asteriscos.pipe';
 import {ReactiveFormsModule} from '@angular/forms';
 import { FormcontrolComponent } from './components/formcontrol/formcontrol.component';
+import { SubirfileComponent } from './components/subirfile/subirfile.component';
 
 // Metodo para setear el idioma
 registerLocaleData(localEs);
@@ -41,7 +42,8 @@ registerLocaleData(localFr);
     CapitalizadoPipe,
     DomseguroPipe,
     AsteriscosPipe,
-    FormcontrolComponent
+    FormcontrolComponent,
+    SubirfileComponent
   ],
   imports: [
     BrowserModule,

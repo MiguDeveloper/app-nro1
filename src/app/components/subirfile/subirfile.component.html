@@ -1,0 +1,21 @@
+<form novalidate (ngSubmit)="onSubmit()" [formGroup]="formUsuario">
+  <div class="form-group">
+    <label>First</label>
+    <input formControlName="comentario" type="input" class="form-control">
+    <div
+      *ngIf="formUsuario.controls.comentario.invalid && (formUsuario.controls.comentario.dirty || formUsuario.controls.comentario.touched)">
+    <div *ngIf="formUsuario.controls.comentario.errors">
+      Campo obligatorio
+    </div>
+    </div>
+  </div>
+
+
+  <div class="form-group">
+    <button class="bnt btn-outline-primary" type="button" (click)="fileInput.click()">Cargar plantilla</button>
+    <input hidden (change)="onFileSelected()" #fileInput type="file" id="file">
+  </div>
+
+  <button type="submit" class="btn btn-primary">Enviar</button>
+</form>
+
